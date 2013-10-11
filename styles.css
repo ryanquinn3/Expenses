@@ -22,6 +22,8 @@ body
 
 #expense-list{
 	list-style: none;
+	font-size: 200%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .green{
