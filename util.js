@@ -25,7 +25,7 @@ events: {
 },
 showPrompt: function () {
 var expense_amount = prompt("What is the amount?");
-var expense_model = new Expense({ name: expense_amount});
+var expense_model = new Expense({ name: "$"+expense_amount});
 //Add a new friend model to our friend collection
 this.expenses.add( expense_model );
 },
