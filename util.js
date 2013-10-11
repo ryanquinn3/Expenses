@@ -34,18 +34,13 @@ AppView = Backbone.View.extend({
 		{
 			var correct = "$"+ input.val();
 		}
-		if($('incoming-expense').is(":checked"))
-		{
-			var income = true;
-		}
-		else
-		{
-			var income = false;
-		}
+		var income = $("#incoming-expense").is(":checked");
+		
 		var expense_model = new Expense({ name: correct, incoming: income});
 		//Add a new friend model to our friend collection
 		this.expenses.add( expense_model );
 		input.val("");
+		$("#incoming-expense").attr("checked",false);
 	},
 	addExpenseLi: function (model) {
 	//The parameter passed is a reference to the model that was added
