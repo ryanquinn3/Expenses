@@ -2,15 +2,15 @@
 
 Expense = Backbone.Model.extend({
 //Create a model to hold friend atribute
-name: null
+name: null,
+incoming: false
 });
 
 Expenses = Backbone.Collection.extend({
 //This is our Friends collection and holds our Friend models
 initialize: function (models, options) {
-this.bind("add", options.view.addExpenseLi);
-//Listen for new additions to the collection and call a view function if so
-}
+	this.bind("add", options.view.addExpenseLi);
+	}
 });
 
 AppView = Backbone.View.extend({
@@ -43,8 +43,9 @@ AppView = Backbone.View.extend({
 	},
 	addExpenseLi: function (model) {
 	//The parameter passed is a reference to the model that was added
-	$("#expense-list").append("<li>" + model.get('name') + "</li>");
-	//Use .get to receive attributes of the model
+
+	$("#expense-list").append("<li class='red'>" + model.get('name') + "</li>");
+	
 	}
 });
 
