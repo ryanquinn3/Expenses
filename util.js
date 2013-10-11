@@ -1,13 +1,13 @@
 (function ($) {
 
 Expense = Backbone.Model.extend({
-//Create a model to hold friend atribute
+
 name: null,
 incoming: false
 });
 
 Expenses = Backbone.Collection.extend({
-//This is our Friends collection and holds our Friend models
+
 initialize: function (models, options) {
 	this.bind("add", options.view.addExpenseLi);
 	}
@@ -41,6 +41,12 @@ AppView = Backbone.View.extend({
 		this.expenses.add( expense_model );
 		input.val("");
 		$("#incoming-expense").attr("checked",false);
+		var sum = 0;
+		this.expenses.each(function(exp)
+		{
+			sum += parseInt(exp.get('name'));
+		});
+
 	},
 	addExpenseLi: function (model) {
 	//The parameter passed is a reference to the model that was added
