@@ -10,3 +10,12 @@ body
 {
 	background: #DDDDDD;
 }
+
+.input_box
+{
+	text-align: center;
+}
+
+.red{
+	color: red;
+}
