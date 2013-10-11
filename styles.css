@@ -14,6 +14,7 @@ body
 .input_box
 {
 	text-align: center;
+
 }
 
 .red{
@@ -24,6 +25,12 @@ body
 	list-style: none;
 	font-size: 200%;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#add-expense{
+	width:200px; 
+	height:40px;
+	font-size: 150%;
 }
 
 .green{
