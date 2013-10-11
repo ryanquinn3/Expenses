@@ -39,3 +39,7 @@ body
 .list{
 	text-align: center;
 }
+#sumDisplay{
+	font-size: 30px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}

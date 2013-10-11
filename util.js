@@ -57,7 +57,9 @@ AppView = Backbone.View.extend({
 		else
 			sumDiv.attr("class","red");
 
-		sumDiv.html("$"+sum);
+
+
+		sumDiv.html("$"+Math.abs(sum));
 
 	},
 	addExpenseLi: function (model) {
