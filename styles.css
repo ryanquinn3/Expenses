@@ -23,3 +23,7 @@ body
 #expense-list{
 	list-style: none;
 }
+
+.green{
+	color: green;
+}
