@@ -1,4 +1,0 @@
-Expenses
-========
-
-Fun stuff
