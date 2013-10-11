@@ -17,8 +17,6 @@ AppView = Backbone.View.extend({
 	el: $("body"),
 	initialize: function () {
 		this.expenses = new Expenses( null, { view: this });
-		
-	
 	},
 	events: {
 		"keypress #add-expense":  "showPrompt",
