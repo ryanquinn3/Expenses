@@ -19,3 +19,7 @@ body
 .red{
 	color: red;
 }
+
+#expense-list{
+	list-style: none;
+}
