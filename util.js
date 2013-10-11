@@ -44,8 +44,20 @@ AppView = Backbone.View.extend({
 		var sum = 0;
 		this.expenses.each(function(exp)
 		{
-			sum += parseInt(exp.get('name'));
+			var value = exp.get('name');
+			var intValue = parseInt(value.substring(1,value.length));
+			if(exp.get('incoming'))
+				sum+= intValue;
+			else
+				sum-= intValue;
 		});
+		var sumDiv = $("#sumDisplay");
+		if(sum > 0 )
+			sumDiv.attr("class","green");
+		else
+			sumDiv.attr("class","red");
+
+		sumDiv.html(sum);
 
 	},
 	addExpenseLi: function (model) {
